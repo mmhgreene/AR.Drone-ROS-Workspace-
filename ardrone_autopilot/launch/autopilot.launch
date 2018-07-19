@@ -1,0 +1,9 @@
+<launch>
+    <node name="interface" pkg="ardrone_autopilot" type="interface.py" output="screen">
+        <remap from="/in/image/" to="/ui/image/"/>
+        <param name="swap_red_blue" value="True" />
+    </node>
+    <node name="controller" pkg="ardrone_autopilot" type="controller" output="screen">
+    </node>
+   
+</launch>
